@@ -14,7 +14,7 @@
 		9B21DECC20CA809E008BEDD1 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DECB20CA809E008BEDD1 /* CoreDataTests.swift */; };
 		9B21DED720CA809E008BEDD1 /* CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DED620CA809E008BEDD1 /* CoreDataUITests.swift */; };
 		9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */; };
-		9B43259720DBE80C00CF1ED7 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */; };
+		9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B43259F20DBFF2600CF1ED7 /* CoreData.xcdatamodeld */; };
 		9BDF839420CD56ED0019BC64 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839320CD56ED0019BC64 /* Company.swift */; };
 		9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */; };
 /* End PBXBuildFile section */
@@ -37,20 +37,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9B21DEB320CA809B008BEDD1 /* CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B21DEB320CA809B008BEDD1 /* ElvotraCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElvotraCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21DEB620CA809B008BEDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B21DEB820CA809B008BEDD1 /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
 		9B21DEBD20CA809E008BEDD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B21DEC020CA809E008BEDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B21DEC220CA809E008BEDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B21DEC720CA809E008BEDD1 /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B21DEC720CA809E008BEDD1 /* ElvotraCoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElvotraCoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21DECB20CA809E008BEDD1 /* CoreDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataTests.swift; sourceTree = "<group>"; };
 		9B21DECD20CA809E008BEDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9B21DED220CA809E008BEDD1 /* CoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B21DED220CA809E008BEDD1 /* ElvotraCoreDataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElvotraCoreDataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21DED620CA809E008BEDD1 /* CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUITests.swift; sourceTree = "<group>"; };
 		9B21DED820CA809E008BEDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
-		9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		9B4325A020DBFF2600CF1ED7 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		9BDF839320CD56ED0019BC64 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,9 +93,9 @@
 		9B21DEB420CA809B008BEDD1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9B21DEB320CA809B008BEDD1 /* CoreData.app */,
-				9B21DEC720CA809E008BEDD1 /* CoreDataTests.xctest */,
-				9B21DED220CA809E008BEDD1 /* CoreDataUITests.xctest */,
+				9B21DEB320CA809B008BEDD1 /* ElvotraCoreData.app */,
+				9B21DEC720CA809E008BEDD1 /* ElvotraCoreDataTests.xctest */,
+				9B21DED220CA809E008BEDD1 /* ElvotraCoreDataUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9B21DEB620CA809B008BEDD1 /* AppDelegate.swift */,
-				9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */,
+				9B43259F20DBFF2600CF1ED7 /* CoreData.xcdatamodeld */,
 				9BDF839220CD56970019BC64 /* Model */,
 				9B21DEE420CAA703008BEDD1 /* ViewControllers */,
 				9B21DEE520CAA80C008BEDD1 /* Extensions */,
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9B21DEB220CA809B008BEDD1 /* CoreData */ = {
+		9B21DEB220CA809B008BEDD1 /* ElvotraCoreData */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B21DEDB20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreData" */;
+			buildConfigurationList = 9B21DEDB20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreData" */;
 			buildPhases = (
 				9B21DEAF20CA809B008BEDD1 /* Sources */,
 				9B21DEB020CA809B008BEDD1 /* Frameworks */,
@@ -173,14 +173,14 @@
 			);
 			dependencies = (
 			);
-			name = CoreData;
+			name = ElvotraCoreData;
 			productName = CoreData;
-			productReference = 9B21DEB320CA809B008BEDD1 /* CoreData.app */;
+			productReference = 9B21DEB320CA809B008BEDD1 /* ElvotraCoreData.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9B21DEC620CA809E008BEDD1 /* CoreDataTests */ = {
+		9B21DEC620CA809E008BEDD1 /* ElvotraCoreDataTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B21DEDE20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreDataTests" */;
+			buildConfigurationList = 9B21DEDE20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreDataTests" */;
 			buildPhases = (
 				9B21DEC320CA809E008BEDD1 /* Sources */,
 				9B21DEC420CA809E008BEDD1 /* Frameworks */,
@@ -191,14 +191,14 @@
 			dependencies = (
 				9B21DEC920CA809E008BEDD1 /* PBXTargetDependency */,
 			);
-			name = CoreDataTests;
+			name = ElvotraCoreDataTests;
 			productName = CoreDataTests;
-			productReference = 9B21DEC720CA809E008BEDD1 /* CoreDataTests.xctest */;
+			productReference = 9B21DEC720CA809E008BEDD1 /* ElvotraCoreDataTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9B21DED120CA809E008BEDD1 /* CoreDataUITests */ = {
+		9B21DED120CA809E008BEDD1 /* ElvotraCoreDataUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9B21DEE120CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreDataUITests" */;
+			buildConfigurationList = 9B21DEE120CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreDataUITests" */;
 			buildPhases = (
 				9B21DECE20CA809E008BEDD1 /* Sources */,
 				9B21DECF20CA809E008BEDD1 /* Frameworks */,
@@ -209,9 +209,9 @@
 			dependencies = (
 				9B21DED420CA809E008BEDD1 /* PBXTargetDependency */,
 			);
-			name = CoreDataUITests;
+			name = ElvotraCoreDataUITests;
 			productName = CoreDataUITests;
-			productReference = 9B21DED220CA809E008BEDD1 /* CoreDataUITests.xctest */;
+			productReference = 9B21DED220CA809E008BEDD1 /* ElvotraCoreDataUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -237,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9B21DEAE20CA809B008BEDD1 /* Build configuration list for PBXProject "CoreData" */;
+			buildConfigurationList = 9B21DEAE20CA809B008BEDD1 /* Build configuration list for PBXProject "ElvotraCoreData" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -250,9 +250,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9B21DEB220CA809B008BEDD1 /* CoreData */,
-				9B21DEC620CA809E008BEDD1 /* CoreDataTests */,
-				9B21DED120CA809E008BEDD1 /* CoreDataUITests */,
+				9B21DEB220CA809B008BEDD1 /* ElvotraCoreData */,
+				9B21DEC620CA809E008BEDD1 /* ElvotraCoreDataTests */,
+				9B21DED120CA809E008BEDD1 /* ElvotraCoreDataUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -290,7 +290,7 @@
 			files = (
 				9BDF839420CD56ED0019BC64 /* Company.swift in Sources */,
 				9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */,
-				9B43259720DBE80C00CF1ED7 /* CoreData.xcdatamodeld in Sources */,
+				9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */,
 				9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */,
 				9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */,
 				9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */,
@@ -318,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		9B21DEC920CA809E008BEDD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B21DEB220CA809B008BEDD1 /* CoreData */;
+			target = 9B21DEB220CA809B008BEDD1 /* ElvotraCoreData */;
 			targetProxy = 9B21DEC820CA809E008BEDD1 /* PBXContainerItemProxy */;
 		};
 		9B21DED420CA809E008BEDD1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9B21DEB220CA809B008BEDD1 /* CoreData */;
+			target = 9B21DEB220CA809B008BEDD1 /* ElvotraCoreData */;
 			targetProxy = 9B21DED320CA809E008BEDD1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -504,7 +504,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreData.app/CoreData";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElvotraCoreData.app/ElvotraCoreData";
 			};
 			name = Debug;
 		};
@@ -524,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoreData.app/CoreData";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ElvotraCoreData.app/ElvotraCoreData";
 			};
 			name = Release;
 		};
@@ -569,7 +569,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9B21DEAE20CA809B008BEDD1 /* Build configuration list for PBXProject "CoreData" */ = {
+		9B21DEAE20CA809B008BEDD1 /* Build configuration list for PBXProject "ElvotraCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B21DED920CA809E008BEDD1 /* Debug */,
@@ -578,7 +578,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B21DEDB20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreData" */ = {
+		9B21DEDB20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreData" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B21DEDC20CA809E008BEDD1 /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B21DEDE20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreDataTests" */ = {
+		9B21DEDE20CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreDataTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B21DEDF20CA809E008BEDD1 /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9B21DEE120CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "CoreDataUITests" */ = {
+		9B21DEE120CA809E008BEDD1 /* Build configuration list for PBXNativeTarget "ElvotraCoreDataUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9B21DEE220CA809E008BEDD1 /* Debug */,
@@ -608,12 +608,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */ = {
+		9B43259F20DBFF2600CF1ED7 /* CoreData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */,
+				9B4325A020DBFF2600CF1ED7 /* CoreData.xcdatamodel */,
 			);
-			currentVersion = 9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */;
+			currentVersion = 9B4325A020DBFF2600CF1ED7 /* CoreData.xcdatamodel */;
 			path = CoreData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

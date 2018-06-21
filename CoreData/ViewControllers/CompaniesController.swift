@@ -12,7 +12,6 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
 
     var companies = [Company]() 
 
-    
     let cellID = "cellID"
     override func viewDidLoad() {
         super.viewDidLoad()

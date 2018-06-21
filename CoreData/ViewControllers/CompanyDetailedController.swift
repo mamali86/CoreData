@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 
 protocol companyDetailedControllerDelegate {
@@ -54,12 +55,14 @@ class CompanyDetailedController: UIViewController {
     
     @objc fileprivate func handleSave() {
         
-        dismiss(animated: true) {
-            guard let companyName = self.nameTextFiled.text else {return}
-            let company = Company(name: companyName, founded: Date())
-            self.delegate?.didAddCompany(company: company)
+        
+        
+//        dismiss(animated: true) {
+//            guard let companyName = self.nameTextFiled.text else {return}
+//            let company = Company(name: companyName, founded: Date())
+//            self.delegate?.didAddCompany(company: company)
             
-        }
+//        }
         
     }
     

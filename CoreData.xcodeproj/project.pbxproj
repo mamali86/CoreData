@@ -14,6 +14,7 @@
 		9B21DECC20CA809E008BEDD1 /* CoreDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DECB20CA809E008BEDD1 /* CoreDataTests.swift */; };
 		9B21DED720CA809E008BEDD1 /* CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DED620CA809E008BEDD1 /* CoreDataUITests.swift */; };
 		9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */; };
+		9B43259720DBE80C00CF1ED7 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */; };
 		9BDF839420CD56ED0019BC64 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839320CD56ED0019BC64 /* Company.swift */; };
 		9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		9B21DED620CA809E008BEDD1 /* CoreDataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataUITests.swift; sourceTree = "<group>"; };
 		9B21DED820CA809E008BEDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
+		9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
 		9BDF839320CD56ED0019BC64 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9B21DEB620CA809B008BEDD1 /* AppDelegate.swift */,
+				9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */,
 				9BDF839220CD56970019BC64 /* Model */,
 				9B21DEE420CAA703008BEDD1 /* ViewControllers */,
 				9B21DEE520CAA80C008BEDD1 /* Extensions */,
@@ -287,6 +290,7 @@
 			files = (
 				9BDF839420CD56ED0019BC64 /* Company.swift in Sources */,
 				9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */,
+				9B43259720DBE80C00CF1ED7 /* CoreData.xcdatamodeld in Sources */,
 				9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */,
 				9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */,
 				9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */,
@@ -602,6 +606,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9B43259520DBE80C00CF1ED7 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = 9B43259620DBE80C00CF1ED7 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9B21DEAB20CA809B008BEDD1 /* Project object */;
 }

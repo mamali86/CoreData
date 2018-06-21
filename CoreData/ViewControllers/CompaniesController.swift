@@ -10,7 +10,7 @@ import UIKit
 
 class CompaniesController: UITableViewController, companyDetailedControllerDelegate {
 
-    var companies = [Company]()
+    var companies = [Company]() 
 
     
     let cellID = "cellID"

@@ -18,28 +18,15 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
     
     fileprivate func fetchCompanies() {
         
-        let persistenceContainer = NSPersistentContainer(name: "CoreData")
         
-        persistenceContainer.loadPersistentStores { (storeDescription, err) in
-            
-            if let err = err {
-                
-                fatalError("Loading of store failed: \(err)")
-            }
-        }
-        
-        let context = persistenceContainer.viewContext
+        let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
         let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
         
         
         do {
             
             let companies = try context.fetch(fetchRequest)
-            
-            companies.forEach { (company) in
-                print(company.name ?? "")
-            }
-            
+            self.companies = companies
             
         } catch let err {
             

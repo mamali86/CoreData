@@ -15,6 +15,7 @@
 		9B21DED720CA809E008BEDD1 /* CoreDataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DED620CA809E008BEDD1 /* CoreDataUITests.swift */; };
 		9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */; };
 		9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B43259F20DBFF2600CF1ED7 /* CoreData.xcdatamodeld */; };
+		9B4325A720DD16CC00CF1ED7 /* PersistenceContainerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4325A620DD16CC00CF1ED7 /* PersistenceContainerManager.swift */; };
 		9BDF839420CD56ED0019BC64 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839320CD56ED0019BC64 /* Company.swift */; };
 		9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +52,7 @@
 		9B21DED820CA809E008BEDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Theme.swift"; sourceTree = "<group>"; };
 		9B4325A020DBFF2600CF1ED7 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		9B4325A620DD16CC00CF1ED7 /* PersistenceContainerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceContainerManager.swift; sourceTree = "<group>"; };
 		9BDF839320CD56ED0019BC64 /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,6 +113,7 @@
 				9B21DEBD20CA809E008BEDD1 /* Assets.xcassets */,
 				9B21DEBF20CA809E008BEDD1 /* LaunchScreen.storyboard */,
 				9B21DEC220CA809E008BEDD1 /* Info.plist */,
+				9B4325A620DD16CC00CF1ED7 /* PersistenceContainerManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */,
 				9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */,
 				9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */,
+				9B4325A720DD16CC00CF1ED7 /* PersistenceContainerManager.swift in Sources */,
 				9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */,
 				9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */,
 			);

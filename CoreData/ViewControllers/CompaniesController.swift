@@ -7,15 +7,53 @@
 //
 
 import UIKit
+import CoreData
 
 class CompaniesController: UITableViewController, companyDetailedControllerDelegate {
 
     var companies = [Company]() 
 
     let cellID = "cellID"
+    
+    
+    fileprivate func fetchCompanies() {
+        
+        let persistenceContainer = NSPersistentContainer(name: "CoreData")
+        
+        persistenceContainer.loadPersistentStores { (storeDescription, err) in
+            
+            if let err = err {
+                
+                fatalError("Loading of store failed: \(err)")
+            }
+        }
+        
+        let context = persistenceContainer.viewContext
+        let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
+        
+        
+        do {
+            
+            let companies = try context.fetch(fetchRequest)
+            
+            companies.forEach { (company) in
+                print(company.name ?? "")
+            }
+            
+            
+        } catch let err {
+            
+            print("Failed to fecth companies", err)
+            
+        }
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        fetchCompanies()
         
         view.backgroundColor = .white
         tableView.tableFooterView = UIView()

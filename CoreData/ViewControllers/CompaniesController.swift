@@ -71,6 +71,37 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
     }
     
     
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { (_, _) in
+            
+         let company = self.companies[indexPath.item]
+         self.companies.remove(at: indexPath.row)
+         tableView.deleteRows(at: [indexPath], with: .automatic)
+         let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
+         context.delete(company)
+            
+            //perssiting the deletion
+            
+            do {
+                try context.save()
+            } catch let saveErr {
+                print("error in deleting company", saveErr)
+                
+            }
+    
+            
+        }
+        
+        
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (_, _) in
+            
+        }
+
+        return [deleteAction, editAction]
+    }
+    
+    
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
         view.backgroundColor = .lightBlue

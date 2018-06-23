@@ -11,6 +11,7 @@ import CoreData
 
 class CompaniesController: UITableViewController, companyDetailedControllerDelegate {
 
+    
     var companies = [Company]() 
 
     let cellID = "cellID"
@@ -18,10 +19,8 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
     
     fileprivate func fetchCompanies() {
         
-        
         let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
         let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
-        
         
         do {
             
@@ -31,10 +30,10 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         } catch let err {
             
             print("Failed to fecth companies", err)
-            
         }
     
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +77,7 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
          let company = self.companies[indexPath.item]
          self.companies.remove(at: indexPath.row)
          tableView.deleteRows(at: [indexPath], with: .automatic)
+    
          let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
          context.delete(company)
             
@@ -89,18 +89,27 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
                 print("error in deleting company", saveErr)
                 
             }
-    
-            
         }
         
+        let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: editHandler)
         
-        let editAction = UITableViewRowAction(style: .normal, title: "Edit") { (_, _) in
-            
-        }
+        
+        deleteAction.backgroundColor = UIColor.lightRed
+        editAction.backgroundColor = UIColor.darkGreen
 
         return [deleteAction, editAction]
     }
     
+    
+    fileprivate func editHandler(action: UITableViewRowAction, indexPath: IndexPath) {
+        
+        let editController = CompanyDetailedController()
+        let navController = CustomNavigationController(rootViewController: editController)
+        editController.delegate = self
+        editController.company = self.companies[indexPath.item]
+        present(navController, animated: true, completion: nil)
+        
+    }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
@@ -128,6 +137,14 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         companies.append(company)
         let newindexPath = IndexPath(row: companies.count - 1, section: 0)
         tableView.insertRows(at: [newindexPath], with: .automatic)
+    }
+    
+    func didEditCompany(company: Company) {
+        
+        guard let row = companies.index(of: company) else {return}
+        let reloadIndexPath = IndexPath(row: row, section: 0)
+        tableView.reloadRows(at: [reloadIndexPath], with: .middle)
+        
     }
     
 }

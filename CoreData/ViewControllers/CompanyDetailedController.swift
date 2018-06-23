@@ -12,12 +12,23 @@ import CoreData
 
 protocol companyDetailedControllerDelegate {
     func didAddCompany(company: Company)
+    func didEditCompany(company: Company)
 }
 
 
 class CompanyDetailedController: UIViewController {
     
     var delegate: companyDetailedControllerDelegate?
+    
+    var company: Company? {
+        didSet{
+            
+            nameTextFiled.text = company?.name
+            
+        }
+    }
+    
+    
     let nameLabel: UILabel = {
         let label = UILabel()
         label.text = "name"
@@ -33,6 +44,13 @@ class CompanyDetailedController: UIViewController {
         
     }()
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationItem.title = company == nil ? "Create Company" : "Edit Company"
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +74,40 @@ class CompanyDetailedController: UIViewController {
     @objc fileprivate func handleSave() {
         
         
+        if self.company == nil {
+            
+         createComany()
+            
+        } else {
+            
+          editCompany()
+            
+        }
+        
+    }
+    
+    
+    fileprivate func editCompany() {
+        
+        let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
+
+        
+        company?.name = nameTextFiled.text
+        do {
+            try context.save()
+
+            dismiss(animated: true) {
+                
+                self.delegate?.didEditCompany(company: self.company!)
+            }
+        } catch let saveErr {
+            print("Failed to save company", saveErr)
+        }
+    
+    }
+    
+    fileprivate func createComany() {
+        
         let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
         let company = NSEntityDescription.insertNewObject(forEntityName: "Company", into: context)
         
@@ -70,8 +122,6 @@ class CompanyDetailedController: UIViewController {
         } catch let saveErr {
             print("Failed to save company", saveErr)
         }
-        
-        
     }
     
    

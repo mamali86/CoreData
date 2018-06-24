@@ -40,7 +40,6 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         // Do any additional setup after loading the view, typically from a nib.
         
         fetchCompanies()
-        
         view.backgroundColor = .white
         tableView.tableFooterView = UIView()
         tableView.backgroundColor = .darkGreen
@@ -72,8 +71,14 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
 
         }
         
+        
+        
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        
+        if let companyData = company.imageData {
+        cell.imageView?.image = UIImage(data: companyData)
+        }
         
         return cell
         
@@ -106,7 +111,6 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         }
         
         let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: editHandler)
-        
         
         deleteAction.backgroundColor = UIColor.lightRed
         editAction.backgroundColor = UIColor.darkGreen

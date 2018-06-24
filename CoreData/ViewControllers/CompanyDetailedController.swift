@@ -27,6 +27,13 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
             guard let founded = company?.founded else {return}
             datePicker.date = founded
             
+            if let compnayImageData = company?.imageData {
+                
+                companyImageView.image = UIImage(data: compnayImageData)
+                
+            }
+            circularImage()
+            
         }
     }
     
@@ -47,7 +54,6 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         imagePicker.allowsEditing = true
         present(imagePicker, animated: true, completion: nil)
         
-        
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -65,8 +71,21 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
             companyImageView.image = editedImage
         }
         
+        
+       circularImage()
+        
         dismiss(animated: true, completion: nil)
 
+    }
+    
+    fileprivate func circularImage() {
+    
+    companyImageView.layer.cornerRadius = companyImageView.frame.width / 2
+    companyImageView.layer.masksToBounds = true
+    companyImageView.layer.borderColor = UIColor.darkGreen.cgColor
+    companyImageView.contentMode = .scaleAspectFill
+    companyImageView.layer.borderWidth = 3
+    
     }
     
     
@@ -141,6 +160,16 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         
         company?.name = nameTextFiled.text
         company?.founded = datePicker.date
+        
+        
+        if let companyImage =  companyImageView.image {
+            
+            let imageData = UIImageJPEGRepresentation(companyImage, 0.8)
+            company?.imageData = imageData
+            
+        }
+        
+        
         do {
             try context.save()
 
@@ -161,7 +190,15 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         
         company.setValue(nameTextFiled.text, forKey: "name")
         company.setValue(datePicker.date, forKey: "founded")
-
+        
+        
+        if let companyImage =  companyImageView.image {
+    
+            let imageData = UIImageJPEGRepresentation(companyImage, 0.8)
+            company.setValue(imageData, forKey: "imageData")
+            
+        }
+        
         
         // perform the save
         do {
@@ -196,8 +233,7 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         companyImageView.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
 
-        
-        
+
         view.addSubview(nameLabel)
         nameLabel.topAnchor.constraint(equalTo: companyImageView.bottomAnchor, constant: 0).isActive = true
         nameLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true

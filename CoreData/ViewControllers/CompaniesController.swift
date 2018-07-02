@@ -46,7 +46,52 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         tableView.separatorColor = .white
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
         navigationItem.title = "Companies"
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Reset", style: .plain, target: self, action: #selector(handleReset))
+        
+        
         setupNavBarItems()
+    }
+    
+    
+    @objc private func handleReset() {
+        
+        // Accessing the context to access and modify objects in CoreData
+        let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
+        
+        companies.forEach { (company) in
+            
+            
+            context.delete(company)
+        }
+        
+        
+        let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: Company.fetchRequest())
+        
+        
+        do {
+            try context.execute(batchDeleteRequest)
+            
+            
+            var indexPathsToRemove = [IndexPath]()
+            
+            
+            for (index, _) in companies.enumerated() {
+                let indexPath = IndexPath(row: index, section: 0)
+                indexPathsToRemove.append(indexPath)
+            }
+            
+            companies.removeAll()
+            tableView.deleteRows(at: indexPathsToRemove, with: .left)
+            tableView.reloadData()
+            
+        } catch let err {
+            
+            print("Failed to delete from CoreData", err)
+            
+        }
+        
+        
     }
     
     
@@ -72,7 +117,6 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         }
         
         
-        
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         
@@ -83,6 +127,27 @@ class CompaniesController: UITableViewController, companyDetailedControllerDeleg
         return cell
         
     }
+    
+    
+    
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        
+        let label = UILabel()
+        label.text = "No companies available..."
+        label.textColor = .white
+        label.textAlignment = .center
+        label.font = UIFont.boldSystemFont(ofSize: 16)
+        return label
+
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        
+        return self.companies.isEmpty == true ? 150 : 0
+
+    }
+    
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return companies.count

@@ -70,8 +70,7 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
             
             companyImageView.image = editedImage
         }
-        
-        
+
        circularImage()
         
         dismiss(animated: true, completion: nil)

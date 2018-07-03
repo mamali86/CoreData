@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B1F395D20EB9E950079BD78 /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1F395C20EB9E950079BD78 /* CompanyCell.swift */; };
 		9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DEB620CA809B008BEDD1 /* AppDelegate.swift */; };
 		9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B21DEB820CA809B008BEDD1 /* CompaniesController.swift */; };
 		9B21DEBE20CA809E008BEDD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B21DEBD20CA809E008BEDD1 /* Assets.xcassets */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B1F395C20EB9E950079BD78 /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
 		9B21DEB320CA809B008BEDD1 /* ElvotraCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElvotraCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B21DEB620CA809B008BEDD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9B21DEB820CA809B008BEDD1 /* CompaniesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaniesController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B1F395B20EB9E670079BD78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9B1F395C20EB9E950079BD78 /* CompanyCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9B21DEAA20CA809B008BEDD1 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 				9B43259F20DBFF2600CF1ED7 /* CoreData.xcdatamodeld */,
 				9BDF839220CD56970019BC64 /* Model */,
 				9B21DEE420CAA703008BEDD1 /* ViewControllers */,
+				9B1F395B20EB9E670079BD78 /* View */,
 				9B21DEE520CAA80C008BEDD1 /* Extensions */,
 				9B21DEBD20CA809E008BEDD1 /* Assets.xcassets */,
 				9B21DEBF20CA809E008BEDD1 /* LaunchScreen.storyboard */,
@@ -294,6 +305,7 @@
 				9BDF839420CD56ED0019BC64 /* Company.swift in Sources */,
 				9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */,
 				9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */,
+				9B1F395D20EB9E950079BD78 /* CompanyCell.swift in Sources */,
 				9B42863320CADF6500B5BAFC /* UIColor+Theme.swift in Sources */,
 				9B4325A720DD16CC00CF1ED7 /* PersistenceContainerManager.swift in Sources */,
 				9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */,

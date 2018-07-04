@@ -37,14 +37,12 @@ class CompanyCell: UITableViewCell {
 //
 //        }
     }
-    
+
     }
-    
     
     let companyImage: UIImageView =  {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        
         image.layer.cornerRadius = 20
         image.layer.masksToBounds = true
         image.layer.borderColor = UIColor.darkGreen.cgColor

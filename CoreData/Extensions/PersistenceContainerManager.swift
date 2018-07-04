@@ -30,6 +30,27 @@ struct CoreDataManager  {
         return container
     
     }()
+    
+     func fetchCompanies() ->[Company] {
+        
+        let context = persistenceContainer.viewContext
+        let fetchRequest = NSFetchRequest<Company>(entityName: "Company")
+        
+        do {
+            
+            let companies = try context.fetch(fetchRequest)
+            
+            return companies
+
+            
+        } catch let err {
+            
+            print("Failed to fecth companies", err)
+            return []
+        }
+        
+        
+    }
 
     
 //    let persistenceContainer = NSPersistentContainer(name: "CoreData")

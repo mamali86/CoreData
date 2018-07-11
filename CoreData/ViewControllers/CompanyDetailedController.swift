@@ -122,7 +122,7 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.darkGreen
-        navigationItem.leftBarButtonItem =  UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(handleDismiss))
+        setupNavigationBarCancel()
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave))
         
@@ -130,10 +130,7 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
     }
     
 
-    @objc fileprivate func handleDismiss() {
-        
-        dismiss(animated: true, completion: nil)
-    }
+
     
     
     @objc fileprivate func handleSave() {
@@ -156,10 +153,8 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
         
         let context = CoreDataManager.sharedInstance.persistenceContainer.viewContext
 
-        
         company?.name = nameTextFiled.text
         company?.founded = datePicker.date
-        
         
         if let companyImage =  companyImageView.image {
             
@@ -213,16 +208,8 @@ class CompanyDetailedController: UIViewController, UIImagePickerControllerDelega
    
     fileprivate func setupUI() {
         
-        let lightBlueView = UIView()
-        lightBlueView.backgroundColor = UIColor.lightBlue
-        lightBlueView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(lightBlueView)
         
-        
-        lightBlueView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
-        lightBlueView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
-        lightBlueView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
-        lightBlueView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        let lightBlueView = setupLightBlueView(height: 300)
         
         
         view.addSubview(companyImageView)

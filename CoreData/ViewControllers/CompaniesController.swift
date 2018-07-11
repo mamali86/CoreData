@@ -65,7 +65,7 @@ class CompaniesController: UITableViewController {
     
 
     fileprivate func setupNavBarItems() {
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "plus").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handlePlus))
+        setupNavigationItems(selector: #selector(handlePlus))
     }
     
     @objc fileprivate func handlePlus() {

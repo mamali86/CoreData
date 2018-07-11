@@ -11,6 +11,16 @@ import UIKit
 
 extension CompaniesController {
     
+
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let company = companies[indexPath.row]
+        let employeeController = CompanyEmployeeController()
+        employeeController.company = company
+        navigationController?.pushViewController(employeeController, animated: true)
+        
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! CompanyCell
         

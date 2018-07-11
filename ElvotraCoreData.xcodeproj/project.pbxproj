@@ -21,6 +21,9 @@
 		9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */; };
 		9BF204B320ECEAD700016CBF /* companyDetailedControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF204B220ECEAD700016CBF /* companyDetailedControllerDelegate.swift */; };
 		9BF204B520ECECDC00016CBF /* CompaniesController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF204B420ECECDC00016CBF /* CompaniesController+UITableView.swift */; };
+		9BF204B720F4CA0100016CBF /* CompanyEmployeeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF204B620F4CA0100016CBF /* CompanyEmployeeController.swift */; };
+		9BF204B920F4CB5F00016CBF /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF204B820F4CB5F00016CBF /* UIViewController.swift */; };
+		9BF204BB20F4D48B00016CBF /* CreateCompanyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF204BA20F4D48B00016CBF /* CreateCompanyController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +64,9 @@
 		9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyDetailedController.swift; sourceTree = "<group>"; };
 		9BF204B220ECEAD700016CBF /* companyDetailedControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = companyDetailedControllerDelegate.swift; sourceTree = "<group>"; };
 		9BF204B420ECECDC00016CBF /* CompaniesController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CompaniesController+UITableView.swift"; sourceTree = "<group>"; };
+		9BF204B620F4CA0100016CBF /* CompanyEmployeeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyEmployeeController.swift; sourceTree = "<group>"; };
+		9BF204B820F4CB5F00016CBF /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		9BF204BA20F4D48B00016CBF /* CreateCompanyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCompanyController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,8 @@
 				9BF204B420ECECDC00016CBF /* CompaniesController+UITableView.swift */,
 				9BDF839520CD5A8D0019BC64 /* CompanyDetailedController.swift */,
 				9BF204B220ECEAD700016CBF /* companyDetailedControllerDelegate.swift */,
+				9BF204B620F4CA0100016CBF /* CompanyEmployeeController.swift */,
+				9BF204BA20F4D48B00016CBF /* CreateCompanyController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 			children = (
 				9B42863220CADF6500B5BAFC /* UIColor+Theme.swift */,
 				9B4325A620DD16CC00CF1ED7 /* PersistenceContainerManager.swift */,
+				9BF204B820F4CB5F00016CBF /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,7 +317,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BF204B720F4CA0100016CBF /* CompanyEmployeeController.swift in Sources */,
 				9BDF839420CD56ED0019BC64 /* Company.swift in Sources */,
+				9BF204B920F4CB5F00016CBF /* UIViewController.swift in Sources */,
 				9B21DEB920CA809B008BEDD1 /* CompaniesController.swift in Sources */,
 				9BF204B320ECEAD700016CBF /* companyDetailedControllerDelegate.swift in Sources */,
 				9B4325A120DBFF2600CF1ED7 /* CoreData.xcdatamodeld in Sources */,
@@ -317,6 +328,7 @@
 				9B4325A720DD16CC00CF1ED7 /* PersistenceContainerManager.swift in Sources */,
 				9B21DEB720CA809B008BEDD1 /* AppDelegate.swift in Sources */,
 				9BF204B520ECECDC00016CBF /* CompaniesController+UITableView.swift in Sources */,
+				9BF204BB20F4D48B00016CBF /* CreateCompanyController.swift in Sources */,
 				9BDF839620CD5A8D0019BC64 /* CompanyDetailedController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

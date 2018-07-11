@@ -51,18 +51,32 @@ struct CoreDataManager  {
         
         
     }
+    
+    
+    func createEmployee(employeeName: String) -> Error? {
+        let context = persistenceContainer.viewContext
+        
+        //Create an Employee
+        let employee = NSEntityDescription.insertNewObject(forEntityName: "Employee", into: context)
+        
+         employee.setValue(employeeName, forKey: "name")
+        
+        do {
+            
+            try context.save()
+            return nil
+            
+        } catch let err {
+            
+            print("Failed to create Employee", err)
+            return err
+        }
+        
+        
+
+        
+    }
 
     
-//    let persistenceContainer = NSPersistentContainer(name: "CoreData")
-//
-//    persistenceContainer.loadPersistentStores { (storeDescription, err) in
-//
-//    if let err = err {
-//
-//    fatalError("Loading of store failed: \(err)")
-//    }
-//    }
-//
-//    let context = persistenceContainer.viewContext
     
 }
